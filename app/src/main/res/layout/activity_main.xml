@@ -8,6 +8,7 @@
     tools:context="com.example.patrickmaloney.carstereo.MainActivity">
 
     <LinearLayout
+        android:id="@+id/overall_layout"
         android:layout_width="1008dp"
         android:layout_height="615dp"
         android:orientation="vertical"
@@ -15,6 +16,7 @@
         tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
+            android:id="@+id/top_section"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:background="@android:color/darker_gray"
@@ -37,7 +39,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView"
+                        android:id="@+id/station"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@android:color/holo_blue_bright"
@@ -46,7 +48,7 @@
                         android:typeface="normal" />
 
                     <Switch
-                        android:id="@+id/switch1"
+                        android:id="@+id/radio_frequency"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
@@ -108,12 +110,71 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/bottom_section"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="match_parent"
             android:background="#777"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="0dp">
+            tools:layout_editor_absoluteY="646dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/disk_slot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#777"
+                    android:minWidth="600dp"
+                    app:srcCompat="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/play_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Button"
+                        tools:text="Play" />
+
+                    <Button
+                        android:id="@+id/pause_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Button"
+                        tools:text="Pause" />
+
+                    <Button
+                        android:id="@+id/stop_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="STOP" />
+
+                    <Button
+                        android:id="@+id/skip_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SKIP" />
+
+                    <Button
+                        android:id="@+id/repeat_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="REPEAT" />
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
