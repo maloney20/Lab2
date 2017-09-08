@@ -69,7 +69,7 @@
                         android:id="@+id/power_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/PowerButton" />
+                        app:srcCompat="@mipmap/power_button" />
                 </LinearLayout>
 
             </LinearLayout>
