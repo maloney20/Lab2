@@ -43,33 +43,104 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@android:color/holo_blue_bright"
-                        android:text="Station: 89.9 FM"
+                        android:text="Station: 88.1 FM"
+                        android:textColor="#000000"
                         android:textSize="35sp"
                         android:typeface="normal" />
-
-                    <Switch
-                        android:id="@+id/radio_frequency"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:text="AM / FM" />
 
                     <Space
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
+                    <RadioGroup
+                        android:id="@+id/AMFM_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/AM_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="AM" />
+
+                        <RadioButton
+                            android:id="@+id/FM_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="FM" />
+                    </RadioGroup>
+
                     <SeekBar
-                        android:id="@+id/tuner"
-                        style="@android:style/Widget.Material.Light.SeekBar"
+                        android:id="@+id/AM_tuner"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="visible" />
+                        android:max="1170"
+                        android:progress="10" />
+
+                    <SeekBar
+                        android:id="@+id/FM_tuner"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="198"
+                        android:progress="2" />
 
                     <TextView
                         android:id="@+id/tuner_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Tuning..." />
+
+                    <RadioGroup
+                        android:id="@+id/preset_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/preset1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Preset 1" />
+
+                        <RadioButton
+                            android:id="@+id/preset2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Preset 2" />
+
+                        <RadioButton
+                            android:id="@+id/preset3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Preset 3" />
+
+                        <RadioButton
+                            android:id="@+id/preset4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Preset 4" />
+
+                        <RadioButton
+                            android:id="@+id/preset5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Preset 5" />
+
+                        <RadioButton
+                            android:id="@+id/preset6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Preset 6" />
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -84,11 +155,11 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ToggleButton
                         android:id="@+id/power_button"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/power_button" />
+                        android:text="POWER" />
 
                     <SeekBar
                         android:id="@+id/volume"
@@ -141,7 +212,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button"
+                        android:text="Play"
                         tools:text="Play" />
 
                     <Button
@@ -149,7 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Button"
+                        android:text="Pause"
                         tools:text="Pause" />
 
                     <Button
